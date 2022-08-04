@@ -11,7 +11,7 @@ const Home = () => {
     }
   }, []);
 
-  console.log(genres);
+  // console.log(genres);
 
   return (
     <section className="home">

@@ -19,7 +19,7 @@ export const getGenres = () => (dispatch) => {
       'https://api.themoviedb.org/3/genre/tv/list?api_key=b0dd442bf37e49eecbb517b186e6f5ee&language=en-US'
     )
     .then((res) => {
-      console.log(res.data.genres);
+      // console.log(res.data.genres);
       dispatch(setGenres(res.data.genres));
     })
     .catch((error) => {
