@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 //COMPONENTS
 import Home from './components/Home';
+import MainLayout from './components/MainLayout';
 
 function App() {
   const dispatch = useDispatch();
@@ -19,7 +20,9 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/login" element={<h2>login</h2>} />
-        <Route path="/" element={<Home />} />
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
+        </Route>
       </Routes>
     </div>
   );

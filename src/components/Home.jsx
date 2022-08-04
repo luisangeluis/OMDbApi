@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import GenreGroup from './GenreGroup';
 
 const Home = () => {
   const genres = useSelector((state) => state.genres);
@@ -15,6 +16,8 @@ const Home = () => {
   return (
     <section className="home">
       <div className="container">
+        {genres &&
+          genres.map((genre) => <GenreGroup genre={genre} key={genre.id} />)}
         <h2>HOME</h2>
       </div>
     </section>
