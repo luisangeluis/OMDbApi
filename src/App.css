@@ -23,8 +23,7 @@ body,
 /********************/
 /*Carousel*/
 /********************/
-.carousel {
-}
+
 .carousel-body {
   position: relative;
   overflow: hidden;
@@ -34,12 +33,8 @@ body,
 }
 
 .carousel-movies {
-  min-width: 100%;
   display: flex;
   background-color: red;
-  min-height: 25vh;
-  overflow: visible;
-  box-sizing: border-box;
 }
 
 .carousel-body .card-carousel {
