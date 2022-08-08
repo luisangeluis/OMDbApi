@@ -1,15 +1,15 @@
 const CardSerie = ({ item }) => {
   return (
     //TO DO GET THE IMAGE
-    <div className="card">
+    <article className="card card-carousel">
       <div className="card-body">
-        <h5 className="card-title">{item.name}</h5>
-        <p className="card-text">{item.overview}</p>
+        <h5 className="">{item.name}</h5>
+        <p className="">{item.overview.substring(0, 100)}...</p>
         <a href="#" className="btn btn-primary">
           Go somewhere
         </a>
       </div>
-    </div>
+    </article>
   );
 };
 

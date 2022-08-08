@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.App {
+  min-height: 100vh;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home {
+  flex-grow: 1;
+}
+
+/********************/
+/*Carousel*/
+/********************/
+.carousel {
+}
+.carousel-body {
+  position: relative;
+  overflow: hidden;
+  min-width: 100%;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.carousel-movies {
+  min-width: 100%;
+  display: flex;
+  background-color: red;
+  min-height: 25vh;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.carousel-body .card-carousel {
+  box-sizing: border-box;
+  min-width: 100%;
+  background-color: whitesmoke;
+  word-break: normal;
+  transition: all ease 1.2s;
+  padding: 1rem;
+}
+.carousel-body .card-carousel:hover {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+.carousel .btn {
+  height: 20%;
+  background-color: #00000090;
+  color: whitesmoke;
+  position: absolute;
+  z-index: 1000;
+  cursor: pointer;
+  top: calc(100% - 60%);
+}
+
+.carousel .btn:hover {
+  background-color: #000000;
+  border: none;
+}
+
+.carousel_btn-left {
+  left: 0;
+}
+.carousel_btn-right {
+  right: 0;
+}
+/********************/
+/*End Carousel*/
+/********************/
+/********************/
+/*Media querys*/
+/********************/
+@media screen and (min-width: 576px) {
+  .carousel-body .card-carousel {
+    min-width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .carousel-body {
+    min-height: 20vh;
+  }
+}
+@media screen and (min-width: 992px) {
+  .carousel-body .card-carousel {
+    min-width: 33.33%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .carousel-body .card-carousel {
+    min-width: 20%;
+  }
+}
+@media screen and (min-width: 1400px) {
+}
+/********************/
+/*End media querys*/
+/********************/
