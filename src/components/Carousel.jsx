@@ -10,12 +10,12 @@ const Carousel = ({ listToShow }) => {
   const goToLeft = () => {
     let carouselWidth = carousel.current.offsetWidth;
 
-    carousel.current.scrollLeft -= carouselWidth * 0.8;
+    carousel.current.scrollLeft -= carouselWidth;
   };
   const goToright = () => {
     let carouselWidth = carousel.current.offsetWidth;
     console.log(carouselWidth);
-    carousel.current.scrollLeft += carouselWidth * 0.8;
+    carousel.current.scrollLeft += carouselWidth;
   };
 
   return (
