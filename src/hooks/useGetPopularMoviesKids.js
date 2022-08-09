@@ -1,17 +1,17 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-const useGetPopularMovies = () => {
+const useGetPopularMoviesKids = () => {
   const [movies, setMovies] = useState();
 
   useEffect(() => {
-    getPopularMovies();
+    useGetPopularMoviesKids();
   }, []);
 
-  const getPopularMovies = () => {
+  const useGetPopularMoviesKids = () => {
     axios
       .get(
-        `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=b0dd442bf37e49eecbb517b186e6f5ee`
+        `https://api.themoviedb.org/3/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&api_key=b0dd442bf37e49eecbb517b186e6f5ee`
       )
       .then((res) => {
         // console.log(res.data);
@@ -26,4 +26,4 @@ const useGetPopularMovies = () => {
   return [movies];
 };
 
-export default useGetPopularMovies;
+export default useGetPopularMoviesKids;

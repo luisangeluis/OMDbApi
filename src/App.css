@@ -42,7 +42,7 @@ body,
   min-width: 100%;
   background-color: whitesmoke;
   word-break: normal;
-  transition: all ease 1.2s;
+  /* transition: all ease 1.2s; */
   padding: 1rem;
 }
 .carousel-body .card-carousel:hover {
