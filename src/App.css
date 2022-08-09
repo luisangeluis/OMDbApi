@@ -3,7 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
 html,
 body,
 #root,
@@ -34,20 +41,37 @@ body,
 
 .carousel-movies {
   display: flex;
-  background-color: red;
 }
 
-.carousel-body .card-carousel {
+.card-carousel {
   box-sizing: border-box;
   min-width: 100%;
-  background-color: whitesmoke;
+  background-color: #80808050;
   word-break: normal;
-  /* transition: all ease 1.2s; */
   padding: 1rem;
+  min-height: 30vh;
+  border: 5px solid #140f0790;
 }
-.carousel-body .card-carousel:hover {
+.card-carousel img {
+  transition: all 700ms ease;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.card-carousel img:hover {
   transform: scale(1.2);
+  opacity: 0.9;
   transform-origin: center;
+  border-radius: 3px;
+}
+.card-carousel .card-title {
+  background-color: #00000099;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 5px 5px 2px #140f07, 7px 7px 5px #3f5caf;
+  padding: 0.3rem;
+  text-align: center;
 }
 .carousel .btn {
   height: 20%;
