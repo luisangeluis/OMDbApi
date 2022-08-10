@@ -102,7 +102,7 @@ body,
 /********************/
 @media screen and (min-width: 576px) {
   .carousel-body .card-carousel {
-    min-width: 50%;
+    min-width: calc(100% / 2);
   }
 }
 @media screen and (min-width: 768px) {
@@ -112,12 +112,12 @@ body,
 }
 @media screen and (min-width: 992px) {
   .carousel-body .card-carousel {
-    min-width: 33.33%;
+    min-width: calc(100% / 3);
   }
 }
 @media screen and (min-width: 1200px) {
   .carousel-body .card-carousel {
-    min-width: 20%;
+    min-width: calc(100% / 5);
   }
 }
 @media screen and (min-width: 1400px) {

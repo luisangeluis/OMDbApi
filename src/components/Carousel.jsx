@@ -4,12 +4,11 @@ import CardSerie from './CardSerie';
 
 const Carousel = ({ listToShow }) => {
   const carousel = useRef(null);
-
+  const carouselContainer = useRef(null);
   // console.log(carousel);
 
   const goToLeft = () => {
     let carouselWidth = carousel.current.offsetWidth;
-
     carousel.current.scrollLeft -= carouselWidth;
   };
   const goToright = () => {
@@ -17,10 +16,15 @@ const Carousel = ({ listToShow }) => {
     // console.log(carouselWidth);
     carousel.current.scrollLeft += carouselWidth;
   };
+
+  window.addEventListener('resize', () => {
+    carousel.current.scrollLeft = 0;
+  });
+
   //TO DO review how to make movies focuses
   return (
     <div className="col-12">
-      <section className="carousel">
+      <section className="carousel" ref={carouselContainer}>
         <h2></h2>
         <button className="btn carousel_btn-left" onClick={goToLeft}>
           <i className="fa-solid fa-circle-left"></i>

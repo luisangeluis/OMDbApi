@@ -11,11 +11,17 @@ const useGetMoviePremieres = () => {
   const useGetPremieres = () => {
     const year = date.getFullYear();
     let currentMonth = date.getMonth() + 1;
-    currentMonth = '0' + currentMonth;
+    if (currentMonth.toString().length < 2) {
+      currentMonth = '0' + currentMonth;
+    }
     let beforeMonth = currentMonth - 1;
-    beforeMonth = '0' + beforeMonth;
+    if (beforeMonth.toString().length < 2) {
+      beforeMonth = '0' + beforeMonth;
+    }
     let day = date.getDate();
-    day = '0' + day;
+    if (day.toString().length < 2) {
+      day = '0' + day;
+    }
 
     let currentDate = `${year}-${currentMonth}-${day}`;
     let beforeDate = `${year}-${beforeMonth}-${day}`;
@@ -25,7 +31,7 @@ const useGetMoviePremieres = () => {
         `https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=${beforeDate}&primary_release_date.lte=${currentDate}&api_key=b0dd442bf37e49eecbb517b186e6f5ee`
       )
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         let movies = res.data.results;
         setMovies(movies);
       })
