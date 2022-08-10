@@ -54,7 +54,6 @@ body,
 }
 .card-carousel img {
   transition: all 700ms ease;
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
