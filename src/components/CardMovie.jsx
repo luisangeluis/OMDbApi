@@ -4,7 +4,7 @@ const CardMovie = ({ item }) => {
   //TO DO GET THE IMAGE
   return (
     <article
-      className="card card-carousel"
+      className="card swiper-slide"
       style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/w500/${item.poster_path})`,
       }}

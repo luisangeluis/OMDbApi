@@ -6,6 +6,7 @@ import useGetPopularMovies from '../hooks/useGetPopularMovies';
 import useGetPopularMoviesKids from '../hooks/useGetPopularMoviesKids';
 import Carousel from './Carousel';
 import GenreGroup from './GenreGroup';
+import SwiperCarousel from './SwiperCarousel';
 
 const Home = () => {
   const [movies] = useGetPopularMovies();
@@ -18,13 +19,14 @@ const Home = () => {
     <section className="home">
       <div className="container-fluid">
         <h2>Popular movies</h2>
-        <Carousel listToShow={movies} />
+        <SwiperCarousel listToShow={movies} />
         <h2>Movie premieres</h2>
-        <Carousel listToShow={moviePremieres} />
+        <SwiperCarousel listToShow={moviePremieres} />
         <h2>Popular movies kids</h2>
-        <Carousel listToShow={popularMoviesKids} />
+        <SwiperCarousel listToShow={popularMoviesKids} />
+
         <h2>Best movies this year</h2>
-        <Carousel listToShow={bestMoviesThisYear} />
+        <SwiperCarousel listToShow={popularMoviesKids} />
       </div>
     </section>
   );
