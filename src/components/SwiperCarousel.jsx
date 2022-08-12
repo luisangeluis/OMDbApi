@@ -16,17 +16,14 @@ const ResponsiveBreakpoints = ({ listToShow }) => {
       prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-      // when window width is >= 320px
       768: {
         slidesPerView: 2,
         spaceBetween: 10,
       },
-      // when window width is >= 480px
       992: {
         slidesPerView: 3,
         spaceBetween: 10,
       },
-      // when window width is >= 640px
       1200: {
         slidesPerView: 5,
         spaceBetween: 10,
@@ -34,13 +31,13 @@ const ResponsiveBreakpoints = ({ listToShow }) => {
     },
   });
   return (
-    <div className="swiper">
+    <section className="main-swiper swiper">
       <div class="swiper-wrapper">
         {listToShow && listToShow.map((item) => <CardMovie item={item} />)}
       </div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
-    </div>
+    </section>
   );
 };
 

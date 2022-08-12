@@ -26,11 +26,18 @@ body,
 .home {
   flex-grow: 1;
 }
-
+/********************/
+/*Hero*/
+/********************/
+.hero-container {
+  min-height: 75vh;
+}
+/********************/
+/*End Hero*/
+/********************/
 /********************/
 /*Carousel*/
 /********************/
-
 .carousel-body {
   position: relative;
   overflow: hidden;
@@ -96,22 +103,35 @@ body,
 /********************/
 /*End Carousel*/
 /********************/
-/*Swiper js*/
-.swiper-wrapper {
+/********************/
+/*Swiper React*/
+/********************/
+.main-swiper .swiper-wrapper {
   min-height: 25vh;
 }
-.swiper .swiper-slide {
+.main-swiper .swiper-slide {
   min-height: inherit;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.swiper-button-prev,
-.swiper-button-next {
-  width: 20px;
-  height: 20px;
-  background-color: red;
+.main-swiper .swiper-button-prev,
+.main-swiper .swiper-button-next {
+  width: 25px;
+  height: 50%;
+  top: calc(100% - 65%);
   padding: 1rem;
+  background-color: #00000099;
+  border-radius: 10px;
 }
+.main-swiper .swiper-button-prev::after,
+.main-swiper .swiper-button-next::after {
+  font-size: 10px;
+  font-weight: bold;
+  color: #ffffff;
+}
+/********************/
+/*End Swiper React*/
+/********************/
 /********************/
 /*Media querys*/
 /********************/
