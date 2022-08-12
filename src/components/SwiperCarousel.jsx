@@ -32,11 +32,12 @@ const ResponsiveBreakpoints = ({ listToShow }) => {
   });
   return (
     <section className="main-swiper swiper">
-      <div class="swiper-wrapper">
-        {listToShow && listToShow.map((item) => <CardMovie item={item} />)}
+      <div className="swiper-wrapper">
+        {listToShow &&
+          listToShow.map((item) => <CardMovie item={item} key={item.id} />)}
       </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div className="swiper-button-prev"></div>
+      <div className="swiper-button-next"></div>
     </section>
   );
 };

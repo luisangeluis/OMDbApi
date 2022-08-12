@@ -18,7 +18,7 @@ const Home = () => {
 
   return (
     <main className="home">
-      <Hero />
+      <Hero moviePremieres={moviePremieres} />
       <section className="container">
         <h2>Popular movies</h2>
         <SwiperCarousel listToShow={movies} />
