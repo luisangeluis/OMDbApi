@@ -31,7 +31,7 @@ const ResponsiveBreakpoints = ({ listToShow }) => {
     },
   });
   return (
-    <section className="main-swiper swiper">
+    <section className="main-swiper swiper mb-4 mb-md-5">
       <div className="swiper-wrapper">
         {listToShow &&
           listToShow.map((item) => <CardMovie item={item} key={item.id} />)}

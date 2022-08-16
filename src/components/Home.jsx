@@ -20,13 +20,13 @@ const Home = () => {
     <main className="home">
       <Hero moviePremieres={moviePremieres} />
       <section className="container">
-        <h2>Popular movies</h2>
+        <h2 className="subtitle-one my-2 my-md-3">Popular movies</h2>
         <SwiperCarousel listToShow={movies} />
-        <h2>Movie premieres</h2>
+        <h2 className="subtitle-one my-2 my-md-3">Movie premieres</h2>
         <SwiperCarousel listToShow={moviePremieres} />
-        <h2>Popular movies kids</h2>
+        <h2 className="subtitle-one my-2 my-md-3">Popular movies kids</h2>
         <SwiperCarousel listToShow={popularMoviesKids} />
-        <h2>Best movies this year</h2>
+        <h2 className="subtitle-one my-2 my-md-3">Best movies this year</h2>
         <SwiperCarousel listToShow={bestMoviesThisYear} />
       </section>
     </main>

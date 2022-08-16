@@ -24,7 +24,7 @@ const Hero = ({ moviePremieres }) => {
       <div
         className="container-fluid hero-container mb-3 mb-md-4 p-3 p-md-4"
         style={{
-          background: `linear-gradient(#00000075, #00000075),url(https://image.tmdb.org/t/p/w500/${movieToShow?.backdrop_path}) no-repeat center /cover`,
+          background: `linear-gradient(#00000090, #00000090),url(https://image.tmdb.org/t/p/w500/${movieToShow?.backdrop_path}) no-repeat center /cover`,
         }}
       >
         <div className="row justify-content-left">

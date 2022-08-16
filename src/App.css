@@ -17,10 +17,28 @@ body,
 .App {
   min-height: 100vh;
 }
+body {
+  /* background-color: #213e55; */
+  background: linear-gradient(45deg, #213e55 25%, #306070 50%);
+}
 
 .bg-trasnparent-white {
   background-color: #ffffff75;
 }
+
+.subtitle-one {
+  color: #213e55;
+}
+
+/* Paleta de colores */
+/* 
+  texto mas oscuros estilos mas claro
+  #213e55 
+  #284f62
+  #306070
+  #377575
+  #4d9d8f 
+*/
 .App {
   display: flex;
   flex-direction: column;
@@ -33,11 +51,12 @@ body,
 /********************/
 /*Header*/
 /********************/
-
+.navbar {
+}
 .navbar .container-fluid {
   min-height: 5rem;
   padding: 1.3rem;
-  background-color: #002b5b;
+  background-color: #ffffff;
   color: #ffffff;
 }
 .navbar .navbar-nav a {
