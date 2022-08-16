@@ -28,11 +28,11 @@ const Hero = ({ moviePremieres }) => {
         }}
       >
         <div className="row justify-content-left">
-          <div className="col-md-6 d-flex align-items-end">
-            <article className="card">
+          <div className="col-md-6 d-flex align-items-start">
+            <article className="card bg-transparent-one ">
               <div className="card-body">
-                <h3 className="card-title">{movieToShow?.title}</h3>
-                <p className="card-text">{movieToShow?.overview}</p>
+                <h3 className="card-title text-white">{movieToShow?.title}</h3>
+                <p className="card-text fw-bold">{movieToShow?.overview}</p>
               </div>
             </article>
           </div>

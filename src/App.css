@@ -19,15 +19,18 @@ body,
 }
 body {
   /* background-color: #213e55; */
-  background: linear-gradient(45deg, #213e55 25%, #306070 50%);
+  background: linear-gradient(to right, #213e55, #4d9d8f);
 }
 
+.bg-transparent-one {
+  background-color: #4d9d8f90;
+}
 .bg-trasnparent-white {
   background-color: #ffffff75;
 }
 
 .subtitle-one {
-  color: #213e55;
+  color: #ffffff;
 }
 
 /* Paleta de colores */
@@ -82,7 +85,7 @@ body {
   min-height: inherit;
 }
 .hero-container .card {
-  background-color: #ffffff50;
+  /* background-color: #ffffff50; */
   color: #000000;
   min-height: 25%;
 }
@@ -172,7 +175,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.main-swiper .card {
+  background-color: inherit;
+}
 .main-swiper .card-title {
   background-color: #ffffff75;
   font-weight: bold;
