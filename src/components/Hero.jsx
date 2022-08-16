@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import InputSearch from './InputSearch';
 
 const Hero = ({ moviePremieres }) => {
   const [movieToShow, setMovieToShow] = useState();
@@ -24,17 +25,28 @@ const Hero = ({ moviePremieres }) => {
       <div
         className="container-fluid hero-container mb-3 mb-md-4 p-3 p-md-4"
         style={{
-          background: `linear-gradient(#00000090, #00000090),url(https://image.tmdb.org/t/p/w500/${movieToShow?.backdrop_path}) no-repeat center /cover`,
+          background: `linear-gradient(to left,transparent,transparent),url(https://image.tmdb.org/t/p/w500/${movieToShow?.backdrop_path}) no-repeat center /cover`,
         }}
       >
-        <div className="row justify-content-left">
-          <div className="col-md-6 d-flex align-items-start">
-            <article className="card bg-transparent-one ">
-              <div className="card-body">
-                <h3 className="card-title text-white">{movieToShow?.title}</h3>
-                <p className="card-text fw-bold">{movieToShow?.overview}</p>
+        <div className="row">
+          <div className="col-12 d-flex flex-column">
+            <div className="row flex-grow-1">
+              <div className="col-md-6">
+                <article className="card bg-transparent-one ">
+                  <div className="card-body">
+                    <h3 className="card-title text-white">
+                      {movieToShow?.title}
+                    </h3>
+                    <p className="card-text fw-bold">{movieToShow?.overview}</p>
+                  </div>
+                </article>
               </div>
-            </article>
+            </div>
+            <div className="row flex-grow-1 justify-content-center">
+              <div className="col-md-6">
+                <InputSearch />
+              </div>
+            </div>
           </div>
         </div>
       </div>

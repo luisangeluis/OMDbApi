@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg my-2 py-2 py-md-3">
+    <nav className="navbar navbar-expand-lg my-2  bg-dark">
       <div className="container-fluid px-5">
         <a className="navbar-brand" href="#">
           Navbar

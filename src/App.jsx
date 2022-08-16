@@ -22,6 +22,7 @@ function App() {
         <Route path="/login" element={<h2>login</h2>} />
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/search/:name" element={<h2>Search</h2>} />
         </Route>
       </Routes>
     </div>
