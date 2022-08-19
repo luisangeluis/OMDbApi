@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import InputSearch from './InputSearch';
+import MainInputSearch from './search/MainInputSearch';
 
 const Hero = ({ moviePremieres }) => {
   const [movieToShow, setMovieToShow] = useState();
@@ -44,7 +44,7 @@ const Hero = ({ moviePremieres }) => {
             </div>
             <div className="row flex-grow-1 justify-content-center">
               <div className="col-md-6">
-                <InputSearch />
+                <MainInputSearch />
               </div>
             </div>
           </div>

@@ -8,6 +8,7 @@ import './App.css';
 //COMPONENTS
 import Home from './components/Home';
 import MainLayout from './components/MainLayout';
+import SearchResult from './components/search/SearchResult';
 
 function App() {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ function App() {
         <Route path="/login" element={<h2>login</h2>} />
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/search/:name" element={<h2>Search</h2>} />
+          <Route path="/search/:name" element={<SearchResult />} />
         </Route>
       </Routes>
     </div>
