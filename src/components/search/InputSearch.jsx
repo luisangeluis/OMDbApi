@@ -4,21 +4,13 @@ import { useNavigate } from 'react-router-dom';
 //HOOK FORM
 import { useForm } from 'react-hook-form';
 
-const MainInputSearch = () => {
+const InputSearch = () => {
   const { register, handleSubmit } = useForm();
-
-  const navigate = useNavigate();
-
-  const goToSearch = (data) => {
-    if (data.search) {
-      navigate(`/search/${data.search}`);
-    }
-  };
 
   return (
     <div className="card bg-transparent-one">
       <div className="card-body">
-        <form className="" onSubmit={handleSubmit(goToSearch)}>
+        <form className="">
           <div className="input-group">
             <input
               type="text"
@@ -35,4 +27,4 @@ const MainInputSearch = () => {
   );
 };
 
-export default MainInputSearch;
+export default InputSearch;

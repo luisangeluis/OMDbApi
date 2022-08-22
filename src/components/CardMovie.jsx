@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const CardMovie = ({ item }) => {
-  //TO DO GET THE IMAGE
+const CardMovie = ({ item, description }) => {
+  const [showDescription, setShowDescription] = useState(true);
+
+  useEffect(() => {
+    setShowDescription(description);
+  }, [description]);
+
   return (
     <article
       className="card swiper-slide"
@@ -9,14 +14,9 @@ const CardMovie = ({ item }) => {
         backgroundImage: `url(https://image.tmdb.org/t/p/w500/${item.poster_path})`,
       }}
     >
-      {/* <img
-        src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
-        className="img-fluid"
-        alt={item.original_title}
-      /> */}
       <div className="card-body">
         <h5 className="card-title">{item.title}</h5>
-        {/* <p className="">{item.overview.substring(0, 100)}...</p> */}
+        <p className="card-text">{showDescription === true && item.overview}</p>
       </div>
     </article>
   );

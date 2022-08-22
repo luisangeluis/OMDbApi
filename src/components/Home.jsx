@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 import useGetBestMoviesOfThisYear from '../hooks/useGetBestMoviesOfThisYear';
 import useGetMoviePremieres from '../hooks/useGetMoviePremieres';
 import useGetPopularMovies from '../hooks/useGetPopularMovies';
 import useGetPopularMoviesKids from '../hooks/useGetPopularMoviesKids';
-import Carousel from './Carousel';
-import GenreGroup from './GenreGroup';
 import Hero from './Hero';
 import SwiperCarousel from './SwiperCarousel';
 
