@@ -16,7 +16,8 @@ const CardMovie = ({ item, description }) => {
     >
       <div className="card-body">
         <h5 className="card-title">{item.title}</h5>
-        <p className="card-text">{showDescription === true && item.overview}</p>
+        <p className="card-text">{showDescription ? item.overview : ''}</p>
+        {/* <p className="card-text">{item.overview}</p> */}
       </div>
     </article>
   );

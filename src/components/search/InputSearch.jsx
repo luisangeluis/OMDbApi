@@ -3,14 +3,24 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 //HOOK FORM
 import { useForm } from 'react-hook-form';
+//Redux
+import { useDispatch } from 'react-redux';
+import { getSearchedGroup } from '../../store/slices/searchedGroup.slice';
 
 const InputSearch = () => {
   const { register, handleSubmit } = useForm();
+  const dispatch = useDispatch();
+
+  const getSearch = (data) => {
+    console.log(data.search);
+    let search = data.search;
+    dispatch(getSearchedGroup(search));
+  };
 
   return (
     <div className="card bg-transparent-one">
       <div className="card-body">
-        <form className="">
+        <form className="" onSubmit={handleSubmit(getSearch)}>
           <div className="input-group">
             <input
               type="text"

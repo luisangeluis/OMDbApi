@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 export const searchedGroupSlice = createSlice({
   name: 'searchedGroup',
@@ -19,7 +20,7 @@ export const getSearchedGroup = (search) => (dispatch) => {
     )
     .then((res) => {
       console.log(res);
-      dispatch(setSearchedGroup(res.data));
+      dispatch(setSearchedGroup(res.data.results));
     })
     .catch((error) => console.log(error));
 };
