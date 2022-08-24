@@ -13,10 +13,10 @@ const SearchResult = () => {
   return (
     <div className="container-fluid flex-grow-1">
       <div className="row">
-        <div className="col-md-3">
+        <div className="col-md-4">
           <InputSearch />
         </div>
-        <div className="col-md-9">
+        <div className="col-md-8">
           <SearchedGroup search={name} />
         </div>
       </div>

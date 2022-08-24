@@ -4,7 +4,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import CardMovie from './CardMovie';
+import CardMedia from './media/CardMedia';
 
 const ResponsiveBreakpoints = ({ listToShow }) => {
   const swiper = new Swiper('.swiper', {
@@ -34,7 +34,7 @@ const ResponsiveBreakpoints = ({ listToShow }) => {
     <section className="main-swiper swiper mb-4 mb-md-5">
       <div className="swiper-wrapper">
         {listToShow &&
-          listToShow.map((item) => <CardMovie item={item} key={item.id} />)}
+          listToShow.map((item) => <CardMedia item={item} key={item.id} />)}
       </div>
       <div className="swiper-button-prev"></div>
       <div className="swiper-button-next"></div>

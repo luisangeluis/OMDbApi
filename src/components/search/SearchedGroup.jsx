@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getSearchedGroup } from '../../store/slices/searchedGroup.slice';
 //Components
-import CardMovie from '../CardMovie';
+import CardMedia from '../media/CardMedia';
 
 const SearchedGroup = ({ search }) => {
   const dispatch = useDispatch();
@@ -21,8 +21,8 @@ const SearchedGroup = ({ search }) => {
         <div className="row">
           {searchitems?.length ? (
             searchitems.map((item) => (
-              <div className="col-lg-4 my-2 my-md-3">
-                <CardMovie item={item} key={item.id} description={true} />
+              <div className="col-md-6 col-lg-4 my-2 my-md-3">
+                <CardMedia item={item} key={item.id} description={true} />
               </div>
             ))
           ) : (

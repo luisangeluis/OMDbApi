@@ -171,6 +171,7 @@ body {
 .main-swiper .swiper-wrapper {
   min-height: 25vh;
 }
+
 .main-swiper .swiper-slide {
   min-height: inherit;
   background-repeat: no-repeat;

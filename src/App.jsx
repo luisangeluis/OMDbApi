@@ -6,9 +6,10 @@ import { getGenres } from './store/slices/genres.slice';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 //COMPONENTS
-import Home from './components/Home';
+import Home from './components/home/Home';
 import MainLayout from './components/MainLayout';
 import SearchResult from './components/search/SearchResult';
+import DetailMedia from './components/media/DetailMedia';
 
 function App() {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ function App() {
         <Route path="/login" element={<h2>login</h2>} />
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/media/:id" element={<DetailMedia />} />
           <Route path="/search/:name" element={<SearchResult />} />
         </Route>
       </Routes>

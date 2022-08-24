@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import MainInputSearch from './search/MainInputSearch';
+import MainInputSearch from '../search/MainInputSearch';
 
 const Hero = ({ moviePremieres }) => {
   const [movieToShow, setMovieToShow] = useState();
