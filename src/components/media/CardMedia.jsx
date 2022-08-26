@@ -5,7 +5,12 @@ const CardMedia = ({ item, description }) => {
   const navigate = useNavigate();
 
   const goToDetail = () => {
-    navigate(`/media/${item.id}`);
+    if (item.title) {
+      navigate(`/details/movie/${item.id}`);
+    }
+    if (item.name) {
+      navigate(`/details/tv/${item.id}`);
+    }
   };
 
   return (
