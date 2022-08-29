@@ -5,7 +5,9 @@ const useGetMoviesByGenre = (genreId) => {
   const [movies, setMovies] = useState();
 
   useEffect(() => {
-    getByGenre();
+    if (genreId) {
+      getByGenre();
+    }
   }, [genreId]);
 
   const getByGenre = () => {

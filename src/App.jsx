@@ -30,8 +30,6 @@ function App() {
             <Route path="movie/:id" element={<DetailMediaMovie />} />
             <Route path="tv/:id" element={<DetailMediaTv />} />
           </Route>
-          {/* <Route path="/media/:id" element={<DetailMedia />} /> */}
-          {/* <Route path="/media/tv/:id" element={<DetailMedia />} /> */}
           <Route path="/search/:name" element={<SearchResult />} />
         </Route>
       </Routes>
