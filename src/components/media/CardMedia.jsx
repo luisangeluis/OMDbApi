@@ -6,10 +6,10 @@ const CardMedia = ({ item, description }) => {
 
   const goToDetail = () => {
     if (item.title) {
-      navigate(`/details/movie/${item.id}`);
+      navigate(`/details/movie/media/${item.id}`);
     }
     if (item.name) {
-      navigate(`/details/tv/${item.id}`);
+      navigate(`/details/tv/media/${item.id}`);
     }
   };
 

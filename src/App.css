@@ -233,7 +233,11 @@ body {
 /********************/
 /*Details*/
 /********************/
-
+.related-media_section .card {
+  min-height: 15rem;
+  /* margin-top: 1rem;
+  margin-bottom: 1rem; */
+}
 /********************/
 /*End Details*/
 /********************/

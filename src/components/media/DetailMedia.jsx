@@ -1,28 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useGetDetailMedia from '../../hooks/useGetDetailMedia';
-import useGetMoviesByGenre from '../../hooks/useGetMoviesByGenre';
+import useGetMediaByGenre from '../../hooks/useGetMediaByGenre';
 import CardMedia from './CardMedia';
 
 const DetailMediaMovie = () => {
   const { id } = useParams();
+  const { type } = useParams();
   const apiKey = 'b0dd442bf37e49eecbb517b186e6f5ee';
-  const baseUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`;
+  const baseUrl = `https://api.themoviedb.org/3/${type}/${id}?api_key=${apiKey}&language=en-US`;
   const [detail] = useGetDetailMedia(baseUrl);
-  const [moviesSameGenre] = useGetMoviesByGenre(detail?.genres[0]);
-  const [filteredMoviesSameGenre, setFilteredMoviesSameGenre] = useState();
+  const [mediaSameGenre] = useGetMediaByGenre(type, detail?.genres[0]);
+  const [filteredMediaSameGenre, setFilteredMediaSameGenre] = useState();
 
-  console.log(filteredMoviesSameGenre);
+  // console.log(detail);
+  // console.log(type);
+  // console.log(mediaSameGenre);
 
   useEffect(() => {
-    if (moviesSameGenre) {
-      let filteredMovies = moviesSameGenre.filter(
-        (movie) => movie.title != detail.title
+    if (mediaSameGenre) {
+      let filteredMedia = mediaSameGenre.filter(
+        (media) => media.title != detail.title || media.name != detail.name
       );
-      console.log(filteredMovies);
-      setFilteredMoviesSameGenre(filteredMovies);
+      console.log(filteredMedia);
+      setFilteredMediaSameGenre(filteredMedia);
     }
-  }, [moviesSameGenre]);
+  }, [mediaSameGenre]);
 
   return (
     <section className="container detail flex-grow-1">
@@ -58,10 +61,10 @@ const DetailMediaMovie = () => {
           </div>
         </div>
       </div>
-      <div className="row related-movies_section">
+      <div className="row related-media_section">
         <h3>Related movies</h3>
-        {filteredMoviesSameGenre?.map((movie) => (
-          <div className="col-md-4">
+        {filteredMediaSameGenre?.map((movie) => (
+          <div className="col-md-4 my-2 my-md-3">
             {/* <div
               className="card my-2 my-md-3"
               style={{
