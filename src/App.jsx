@@ -24,6 +24,8 @@ function App() {
         <Route path="/login" element={<h2>login</h2>} />
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/movies" element={<h2>movies</h2>} />
+          <Route path="/series" element={<h2>series</h2>} />
           <Route path="/details/:type/media/:id" element={<DetailMedia />} />
           <Route path="/search/:name" element={<SearchResult />} />
         </Route>
