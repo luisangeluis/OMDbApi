@@ -58,11 +58,11 @@ const DetailMediaMovie = () => {
           </div>
         </div>
       </div>
-      <div className="row">
+      <div className="row related-movies_section">
         <h3>Related movies</h3>
         {filteredMoviesSameGenre?.map((movie) => (
           <div className="col-md-4">
-            <div
+            {/* <div
               className="card my-2 my-md-3"
               style={{
                 backgroundImage: `url(https://image.tmdb.org/t/p/w500/${movie.poster_path})`,
@@ -72,7 +72,8 @@ const DetailMediaMovie = () => {
               <div className="card-body">
                 <h3 className="card-title">{movie.title}</h3>
               </div>
-            </div>
+            </div> */}
+            <CardMedia item={movie} />
           </div>
         ))}
       </div>
