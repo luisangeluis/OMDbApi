@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Swiper, { Navigation, Pagination } from 'swiper';
 // import Swiper and modules styles
 import 'swiper/css';
@@ -8,6 +8,12 @@ import 'swiper/css/pagination';
 import CardMedia from './CardMedia';
 
 const ResponsiveBreakpoints = ({ listToShow }) => {
+  // const [list, setList] = useState();
+
+  // useEffect(() => {
+  //   setList(listToShow);
+  // }, [listToShow]);
+
   const swiper = new Swiper('.swiper', {
     // configure Swiper to use modules
     slidesPerView: 1,

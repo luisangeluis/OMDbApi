@@ -13,7 +13,7 @@ const useGetMediaByGenre = (type, genreId) => {
   const getByGenre = () => {
     axios
       .get(
-        `https://api.themoviedb.org/3/discover/${type}?api_key=b0dd442bf37e49eecbb517b186e6f5ee&language=en-US&with_genres=${genreId}`
+        `https://api.themoviedb.org/3/discover/${type}?api_key=b0dd442bf37e49eecbb517b186e6f5ee&language=en-US`
       )
       .then((res) => {
         console.log(res);
