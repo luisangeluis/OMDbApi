@@ -11,7 +11,7 @@ const useGetSeriesByGenre = (genreId) => {
   const getByGenre = () => {
     axios
       .get(
-        `https://api.themoviedb.org/3/discover/tv?api_key=b0dd442bf37e49eecbb517b186e6f5ee&language=en-US&with_genre=${genreId}`
+        `https://api.themoviedb.org/3/discover/tv?api_key=b0dd442bf37e49eecbb517b186e6f5ee&language=en-US&with_genres=${genreId}`
       )
       .then((res) => {
         // console.log(res);

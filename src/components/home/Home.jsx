@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+//CUSTOM HOOKS
 import useGetBestMoviesOfThisYear from '../../hooks/useGetBestMoviesOfThisYear';
 import useGetMoviePremieres from '../../hooks/useGetMoviePremieres';
 import useGetPopularMovies from '../../hooks/useGetPopularMovies';
 import useGetPopularMoviesKids from '../../hooks/useGetPopularMoviesKids';
+//COMPONENTS
 import Hero from './Hero';
-import SwiperCarousel from '../SwiperCarousel';
+import SwiperCarousel from '../media/SwiperCarousel';
 
 const Home = () => {
   const [movies] = useGetPopularMovies();

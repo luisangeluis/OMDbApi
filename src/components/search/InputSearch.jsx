@@ -1,6 +1,4 @@
 import React from 'react';
-//ROUTER
-import { useNavigate } from 'react-router-dom';
 //HOOK FORM
 import { useForm } from 'react-hook-form';
 //Redux

@@ -48,7 +48,7 @@ const Header = () => {
                 Movies
               </a> */}
               <NavLink
-                to="/movies"
+                to="/media/movies"
                 className={({ isActive }) =>
                   isActive ? `nav-link active` : `nav-link`
                 }
@@ -59,7 +59,7 @@ const Header = () => {
             <li className="nav-item">
               {/* <a className="nav-link ">Series</a> */}
               <NavLink
-                to="/series"
+                to="/media/series"
                 className={({ isActive }) =>
                   isActive ? `nav-link active` : `nav-link`
                 }

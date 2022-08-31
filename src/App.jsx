@@ -10,6 +10,7 @@ import Home from './components/home/Home';
 import MainLayout from './components/MainLayout';
 import SearchResult from './components/search/SearchResult';
 import DetailMedia from './components/media/DetailMedia';
+import MediaView from './components/media/MediaView';
 
 function App() {
   const dispatch = useDispatch();
@@ -24,8 +25,7 @@ function App() {
         <Route path="/login" element={<h2>login</h2>} />
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/movies" element={<h2>movies</h2>} />
-          <Route path="/series" element={<h2>series</h2>} />
+          <Route path="/media/:mediaType" element={<MediaView />} />
           <Route path="/details/:type/media/:id" element={<DetailMedia />} />
           <Route path="/search/:name" element={<SearchResult />} />
         </Route>

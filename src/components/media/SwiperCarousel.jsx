@@ -4,7 +4,8 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import CardMedia from './media/CardMedia';
+//COMPONENTS
+import CardMedia from './CardMedia';
 
 const ResponsiveBreakpoints = ({ listToShow }) => {
   const swiper = new Swiper('.swiper', {
