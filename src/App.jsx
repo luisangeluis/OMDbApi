@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 //REDUX
 import { useDispatch } from 'react-redux';
-import { getGenres } from './store/slices/genres.slice';
+import { getGenresTv } from './store/slices/genresTv.slice';
+import { getGenresMovie } from './store/slices/genresMovie.slice';
 //ROUTES
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
@@ -10,13 +11,14 @@ import Home from './components/home/Home';
 import MainLayout from './components/MainLayout';
 import SearchResult from './components/search/SearchResult';
 import DetailMedia from './components/media/DetailMedia';
-import MediaView from './components/media/MediaView';
+import MovieView from './components/media/MovieView';
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getGenres());
+    dispatch(getGenresTv());
+    dispatch(getGenresMovie());
   }, []);
 
   return (
@@ -25,7 +27,10 @@ function App() {
         <Route path="/login" element={<h2>login</h2>} />
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/media/:mediaType" element={<MediaView />} />
+          <Route path="/media">
+            <Route path="movie" element={<MovieView />} />
+            <Route path="tv" element={<h2>hola</h2>} />
+          </Route>
           <Route path="/details/:type/media/:id" element={<DetailMedia />} />
           <Route path="/search/:name" element={<SearchResult />} />
         </Route>

@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export const genresSlice = createSlice({
-  name: 'genres',
+export const genresTvSlice = createSlice({
+  name: 'genresTv',
   initialState: null,
   reducers: {
     setGenres: (state, action) => {
@@ -11,9 +11,9 @@ export const genresSlice = createSlice({
   },
 });
 
-export const { setGenres } = genresSlice.actions;
+export const { setGenres } = genresTvSlice.actions;
 
-export const getGenres = () => (dispatch) => {
+export const getGenresTv = () => (dispatch) => {
   return axios
     .get(
       'https://api.themoviedb.org/3/genre/tv/list?api_key=b0dd442bf37e49eecbb517b186e6f5ee&language=en-US'
@@ -27,4 +27,4 @@ export const getGenres = () => (dispatch) => {
     });
 };
 
-export default genresSlice.reducer;
+export default genresTvSlice.reducer;

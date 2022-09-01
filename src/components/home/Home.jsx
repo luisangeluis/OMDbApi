@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 //CUSTOM HOOKS
 import useGetBestMoviesOfThisYear from '../../hooks/useGetBestMoviesOfThisYear';
 import useGetMoviePremieres from '../../hooks/useGetMoviePremieres';
@@ -7,23 +6,12 @@ import useGetPopularMoviesKids from '../../hooks/useGetPopularMoviesKids';
 //COMPONENTS
 import Hero from './Hero';
 import SwiperCarousel from '../media/SwiperCarousel';
-//REDUX
-import { useDispatch } from 'react-redux';
-import { getGenres } from '../../store/slices/genres.slice';
 
 const Home = () => {
   const [movies] = useGetPopularMovies();
   const [moviePremieres] = useGetMoviePremieres();
   const [popularMoviesKids] = useGetPopularMoviesKids();
   const [bestMoviesThisYear] = useGetBestMoviesOfThisYear();
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getGenres());
-  }, []);
-
-  useState(() => {}, []);
 
   return (
     <main className="home">

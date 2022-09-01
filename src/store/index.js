@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import genres from './slices/genres.slice';
+import genresTv from './slices/genresTv.slice';
 import searchedGroup from './slices/searchedGroup.slice.js';
+import genresMovie from './slices/genresMovie.slice';
 
 export default configureStore({
   reducer: {
-    genres,
+    genresTv,
     searchedGroup,
+    genresMovie,
   },
 });
