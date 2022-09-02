@@ -33,6 +33,14 @@ function App() {
           </Route>
           <Route path="/details/:type/media/:id" element={<DetailMedia />} />
           <Route path="/search/:name" element={<SearchResult />} />
+          {/* otra opcion */}
+          {/* <Route path="/" element={<Home />} />
+          <Route path="/media">
+            <Route path="movie" element={<MovieView />} />
+            <Route path="tv" element={<h2>hola</h2>} />
+            <Route path="/:type/details/:id" element={<DetailMedia />} />
+
+          </Route> */}
         </Route>
       </Routes>
     </div>
